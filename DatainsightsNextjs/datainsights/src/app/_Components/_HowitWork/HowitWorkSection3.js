@@ -1,4 +1,5 @@
 "use client";
+
 import { Box, Button, Stack, Typography } from "@mui/material";
 import React, { useState } from "react";
 import WorkMap from "../../_Assests/_Images/HowitWorkWorkdMap.svg";
@@ -19,7 +20,6 @@ import {
 import Image from "next/image";
 
 function HowitWorkSection3() {
-  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [selectedButtonIndex, setSelectedButtonIndex] = useState(0);
   const [selectedTextOption, setSelectedTextOption] = useState(0);
   const [image1Visibility, setImage1Visibility] = useState(false);
@@ -30,7 +30,6 @@ function HowitWorkSection3() {
   const [image6Visibility, setImage6Visibility] = useState(false);
 
   const handleButtonClick = (index) => {
-    setSelectedImageIndex(index);
     setSelectedButtonIndex(index);
     setSelectedTextOption(0);
 
@@ -110,7 +109,7 @@ function HowitWorkSection3() {
 
   return (
     <>
-      <Box sx={{ width: "100%", height: "1100px", paddingTop: "100px" }}>
+      <Box sx={{ width: "100%", height: "900px", paddingTop: "100px" }}>
         <Box sx={{ display: "flex", justifyContent: "center" }}>
           <Typography sx={styleTypography4}>
             From Row Data to Stunning Visualization Datainsights’ Drag-and-Drop
@@ -183,56 +182,76 @@ function HowitWorkSection3() {
               </Stack>
               <Box sx={{ display: "flex", justifyContent: "center" }}>
                 {image1Visibility && (
-                  <Image src={WorkMap} alt="Images" style={{ width: "96%" }} />
+                  <Image
+                    src={WorkMap}
+                    alt="Images"
+                    style={{ width: "96%", height: "auto" }}
+                  />
                 )}
                 {image2Visibility && (
-                  <Image src={Analysis} alt="Images" style={{ width: "67%" }} />
+                  <Image
+                    src={Analysis}
+                    alt="Images"
+                    style={{ width: "120%", height: "90%" }}
+                  />
                 )}
                 {image3Visibility && (
-                  <Image src={Web} alt="Images" style={{ width: "67%" }} />
+                  <Image
+                    src={Web}
+                    alt="Images"
+                    style={{ width: "110%", height: "90%" }}
+                  />
                 )}
                 {image4Visibility && (
-                  <Image src={PieChart} alt="Images" style={{ width: "67%" }} />
+                  <Image
+                    src={PieChart}
+                    alt="Images"
+                    style={{ width: "110%", height: "90%" }}
+                  />
                 )}
                 {image5Visibility && (
-                  <Image src={Sql} alt="Images" style={{ width: "96%" }} />
+                  <Image
+                    src={Sql}
+                    alt="Images"
+                    style={{ width: "110%", height: "90%" }}
+                  />
                 )}
                 {image6Visibility && (
                   <Image
                     src={VisualMasterpiece}
                     alt="Images"
-                    style={{ width: "96%" }}
+                    style={{ width: "110%", height: "90%" }}
                   />
                 )}
               </Box>
             </Box>
           </Stack>
         </Box>
+      </Box>
+      <Stack
+        direction={"column"}
+        sx={{ alignItems: "center", width: "100%", justifyContent: "center" }}
+      >
         <Stack
           direction={"column"}
-          sx={{ alignItems: "center", width: "100%", justifyContent: "center" }}
+          spacing={2}
+          sx={{
+            alignItems: "center",
+            width: "80%",
+            justifyContent: "center",
+            height: "250px",
+          }}
         >
-          <Stack
-            direction={"column"}
-            spacing={2}
-            sx={{
-              alignItems: "center",
-              width: "80%",
-              justifyContent: "center",
-              height: "250px",
-            }}
-          >
-            <Typography sx={styleTypography3} textAlign={"center"}>
-              Navigating Data Brilliance with DataInsights
-            </Typography>
-            <Typography sx={styleTypography7} textAlign={"center"}>
-              In the realm of data mastery, DataInsights stands as the beacon,
-              simplifying the intricacies of data handling and empowering your
-              journey. Here's a glance at how DataInsights works its magic:
-            </Typography>
-          </Stack>
+          <Typography sx={styleTypography3} textAlign={"center"}>
+            Navigating Data Brilliance with DataInsights
+          </Typography>
+          <Typography sx={styleTypography7} textAlign={"center"}>
+            In the realm of data mastery, DataInsights stands as the beacon,
+            simplifying the intricacies of data handling and empowering your
+            journey. Here's a glance at how DataInsights works its magic:
+          </Typography>
         </Stack>
-      </Box>
+      </Stack>
     </>
   );
 }
