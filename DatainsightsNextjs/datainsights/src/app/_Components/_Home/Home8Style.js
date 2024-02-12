@@ -21,7 +21,7 @@ export const styleBox2 = {
 };
 
 export const styleBox3 = {
-  background: `url(${Image2Back})  no-repeat`,
+  background: `url(${Image2Back.src})  no-repeat`,
   position: "relative",
   backgroundSize: "100% 100%",
   boxShadow: "none",
@@ -30,7 +30,7 @@ export const styleBox3 = {
   zIndex: 0,
 };
 export const styleBox4 = {
-  background: `url(${Image3Front})  no-repeat`,
+  background: `url(${Image3Front.src})  no-repeat`,
   position: "absolute",
   backgroundSize: "100% 100%",
   boxShadow: "none",
@@ -41,7 +41,7 @@ export const styleBox4 = {
   left: "-15%",
 };
 export const styleBox41 = {
-  background: `url(${Group})  no-repeat`,
+  background: `url(${Group.src})  no-repeat`,
   position: "absolute",
   backgroundSize: "100% 100%",
   boxShadow: "none",

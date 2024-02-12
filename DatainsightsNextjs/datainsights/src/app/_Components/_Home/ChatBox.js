@@ -8,7 +8,7 @@ import Icon3 from "../../_Assests/_Images/ChatBotIcon3.svg";
 import Icon4 from "../../_Assests/_Images/ChatBoxIcon4.svg";
 import { Avatar } from "@mui/material";
 import Link from "next/link";
-const withLink = (to, children) => <Link to={to}>{children}</Link>;
+const withLink = (to, children) => <Link href={to}>{children}</Link>;
 
 const actions = [
   {
