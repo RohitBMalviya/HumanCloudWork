@@ -15,21 +15,22 @@ import {
 import Logo1 from "../../_Assests/_Images/Logo1.svg";
 import navbarElements from "./NavbarElement";
 import Buttons from "../_Home/Buttons";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 
 function Navbar() {
   const router = useRouter();
+  const pathnames = usePathname();
   const [scrolling, setScrolling] = useState(false);
   const [change, setChange] = useState(false);
   const [showSubMenu, setShowSubMenu] = useState(false);
 
   useEffect(() => {
-    if (router.pathname === "/") {
+    if (pathnames === "/") {
       setChange(true);
     } else {
       setChange(false);
     }
-  }, [router.pathname]);
+  }, [pathnames]);
 
   const handleScroll = () => {
     const scrollTop = window.scrollY;

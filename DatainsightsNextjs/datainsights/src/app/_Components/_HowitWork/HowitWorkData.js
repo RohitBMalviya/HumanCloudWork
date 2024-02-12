@@ -1,5 +1,5 @@
 import Image1 from "../../_Assests/_Images/HowitWorkAnimation1.png";
-import Image2 from "../../_Assests/_Images/HowitWorkAnimation1.png";
+import Image2 from "../../_Assests/_Images/HowitWorkAnimation2.svg";
 import Image3 from "../../_Assests/_Images/HowitWorkAnimation3.png";
 import Image4 from "../../_Assests/_Images/HowitWorkAnimation4.png";
 
@@ -9,24 +9,28 @@ export const Data1 = [
     title: "Connectivity",
     desc: "  DataInsights effortlessly links different data sources, creating a harmonious blend for seamless integration and instant retrieval.",
     img: Image1,
+    style: { width: "90%", height: "90%" },
   },
   {
     id: 2,
     title: "Visualization",
     desc: "Turn complex data int captivating visuals. See interactive dashboards and chart turn your data into a vibrant and understandable story.",
     img: Image2,
+    style: { width: "100%", height: "100%" },
   },
   {
     id: 3,
     title: "Collaboration",
     desc: "Shareable dashboards turn insights into a team effort. Encourage teamwork and make data-drive decisions an exciting group activity.",
     img: Image3,
+    style: { width: "80%", height: "80%" },
   },
   {
     id: 4,
     title: "Security",
     desc: " DataInsights strengthens your data protection. Study security safeguards sensitive information providing precise access to analytical wonders without compromise",
     img: Image4,
+    style: { width: "80%", height: "80%" },
   },
 ];
 

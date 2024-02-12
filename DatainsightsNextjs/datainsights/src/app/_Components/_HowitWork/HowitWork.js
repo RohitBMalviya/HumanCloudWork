@@ -9,7 +9,7 @@ import Home8Section from "../_Home/Home8Section";
 function HowitWork() {
   return (
     <>
-      <Box paddingTop={"230px"}>
+      <Box paddingTop={"300px"}>
         <HowitWorkSection1 />
         <Stack direction={"column"} spacing={4} alignItems={"center"}>
           <HowitWorkSection2 ids={1} heights={"600px"} />
