@@ -6,7 +6,7 @@ export const metadata = {
   title: "datainsights",
   description: "HumanCloud",
 };
-
+import "./_Assests/Style/global.css";
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
@@ -17,10 +17,12 @@ export default function RootLayout({ children }) {
         rel="stylesheet"
       />
 
-      <Navbar />
-      <body>{children}</body>
-      <ChatBox />
-      <Footer />
+      <body className="body">
+        <Navbar />
+        {children}
+        <ChatBox />
+        <Footer />
+      </body>
     </html>
   );
 }

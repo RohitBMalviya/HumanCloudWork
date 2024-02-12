@@ -7,12 +7,12 @@ const ButtonData = [
   {
     id: 2,
     name: "Get Started",
-    link: "/getstarted",
+    link: "#",
   },
   {
     id: 3,
     name: "Watch Demo",
-    link: "/watchdemo",
+    link: "#",
   },
   {
     id: 4,
