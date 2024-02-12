@@ -39,7 +39,11 @@ function HowitWorkSection2({ ids, heights }) {
                       justifyContent: "center",
                     }}
                   >
-                    <Image src={item.img} alt="-" />
+                    <Image
+                      src={item.img}
+                      alt="-"
+                      style={{ width: "90%", height: "90%" }}
+                    />
                   </Box>
                   <Stack direction={"column"} spacing={2} sx={{ width: "50%" }}>
                     <Typography sx={styleTypography8}>{item.title}</Typography>
@@ -59,7 +63,11 @@ function HowitWorkSection2({ ids, heights }) {
                       justifyContent: "center",
                     }}
                   >
-                    <Image src={item.img} alt="-" />
+                    <Image
+                      src={item.img}
+                      alt="-"
+                      style={{ width: "90%", height: "90%" }}
+                    />
                   </Box>
                 </>
               )}
