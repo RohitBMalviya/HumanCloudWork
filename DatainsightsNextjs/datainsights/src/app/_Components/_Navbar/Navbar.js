@@ -2,8 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-// import { useLocation } from "react-router-dom";
-// import { useRouter } from "next/router";
+
 import {
   AppBar,
   Box,
@@ -19,13 +18,10 @@ import Buttons from "../_Home/Buttons";
 import { useRouter } from "next/navigation";
 
 function Navbar() {
-  // const location = useLocation();
   const router = useRouter();
   const [scrolling, setScrolling] = useState(false);
   const [change, setChange] = useState(false);
   const [showSubMenu, setShowSubMenu] = useState(false);
-  console.log("change", change);
-  console.log("show", showSubMenu);
 
   useEffect(() => {
     if (router.pathname === "/") {
@@ -113,7 +109,6 @@ function Navbar() {
     <>
       <AppBar
         position="fixed"
-        zindex="0"
         sx={{
           background: "transparent",
           boxShadow: "none",
@@ -170,7 +165,9 @@ function Navbar() {
                     onClick={() => router.push(`${item.link}`)}
                   >
                     {item.title}
-                    {item.id === 3.0 && <Icon>{item.icon}</Icon>}
+                    {item.id === 3.0 && (
+                      <Icon sx={{ paddingBottom: "12px" }}>{item.icon}</Icon>
+                    )}
                     {item.id === 3.0 && showSubMenu && (
                       <Box
                         sx={{
@@ -193,10 +190,7 @@ function Navbar() {
                               ...styleButton,
                               width: "150px",
                             }}
-                            onClick={() => {
-                              router.push(`${subItem.link}`),
-                                console.log("nextpage");
-                            }}
+                            onClick={() => router.push(`${subItem.link}`)}
                           >
                             {subItem.title}
                           </Button>
@@ -206,6 +200,7 @@ function Navbar() {
                   </Button>
                 ))}
               </Box>
+
               {/* Sign up========================================================================== */}
 
               <Box>
