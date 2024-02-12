@@ -155,11 +155,11 @@ function Navbar() {
             {/* List========================================================================== */}
 
             <Grid sx={styleGrid}>
-              <Box sx={styleBox1}>
+              <Box sx={{ ...styleBox1, zIndex: 0, gap: "20px" }}>
                 {navbarElements.map((item, index) => (
                   <Button
                     key={index}
-                    sx={{ ...styleButton }}
+                    sx={styleButton}
                     onMouseEnter={() => setShowSubMenu(item.id === 3.0)}
                     onMouseLeave={() => setShowSubMenu(false)}
                     onClick={() => router.push(`${item.link}`)}
@@ -172,12 +172,12 @@ function Navbar() {
                       <Box
                         sx={{
                           ...styleBox1,
-                          width: "160px",
-                          height: "110px",
+                          width: "150px",
+                          height: "100px",
                           position: "absolute",
+                          zIndex: 2,
                           top: "100%",
                           left: -20,
-                          zIndex: 4,
                           display: "block",
                           borderRadius: "20px",
                           paddingTop: "10px",
@@ -189,8 +189,13 @@ function Navbar() {
                             style={{
                               ...styleButton,
                               width: "150px",
+                              position: "relative",
+                              zIndex: 3,
                             }}
-                            onClick={() => router.push(`${subItem.link}`)}
+                            onClick={(event) => {
+                              event.stopPropagation();
+                              router.push(`${subItem.link}`);
+                            }}
                           >
                             {subItem.title}
                           </Button>
