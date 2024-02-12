@@ -1,0 +1,18 @@
+.slick-track {
+  position: relative;
+  top: 0;
+  left: 0;
+  margin-left: 0;
+  margin-right: 0;
+  display: flex;
+  gap: 70px;
+}
+
+.slick-slider {
+  left: 40px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-size: 40px;
+}
