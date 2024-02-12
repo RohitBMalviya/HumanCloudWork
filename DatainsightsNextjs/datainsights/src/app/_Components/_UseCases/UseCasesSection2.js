@@ -22,7 +22,6 @@ import {
   StyleButton,
 } from "./UseCasesStyle";
 import UseCaseSection6 from "./UseCasesSection6";
-import "../../_Assests/Style/style1.css";
 // function CustomSlide(props) {
 //   const { index, style, ...otherProps } = props;
 //   return (
