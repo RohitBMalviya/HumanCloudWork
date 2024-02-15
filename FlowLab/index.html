@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FlowLab</title>
+    <link rel="stylesheet" href="stylesheet.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+    </style>
+  </head>
+  <body>
+    <!-- Main div ------------------------------------------------- -->
+    <div>
+      <!-- Header ----------------------------------------------- -->
+      <div
+        class="flex justify-center items-center bg-green-600 h-[50px] font-bold text-2xl text-slate-100 tracking-widest"
+      >
+        ACCEPTED
+      </div>
+      <!-- Logo and Renewal Order div main div --------------------------------- -->
+      <div class="flex justify-between items-center w-full px-10 py-5">
+        <!-- Logo Div--------------------------------------- -->
+        <div class="w-1/2">
+          <img
+            src="./images/Logo.png"
+            alt="log"
+            style="width: 400px; height: 200px"
+          />
+        </div>
+        <!-- Renewal Order div---------------------------------------------- -->
+        <div class="w-1/2 space-y-4">
+          <h1 class="font-bold text-6xl">Renewal Order</h1>
+          <div class="flex justify-between">
+            <div class="w-[300px]">
+              <ul class="text-2xl space-y-2">
+                <li>Order no.</li>
+                <li>Created for</li>
+              </ul>
+            </div>
+            <div class="w-[700px]">
+              <ul class="text-2xl space-y-2">
+                <li>mri-3516</li>
+                <li>
+                  s b <br />
+                  <span><a href="#">sean.brown+buyer@getcacheflow.com</a></span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="border-[1px]" />
+      <!-- Supplier and Ship to div---------------------------------------------- -->
+      <div class="flex justify-between items-center w-full p-10">
+        <div class="w-1/2">
+          <!-- Supplier div---------------------------------------------- -->
+          <div class="space-y-4">
+            <h1 class="font-bold text-5xl">Supplier</h1>
+            <div class="space-y-2">
+              <h2 class="font-bold text-3xl">HappyGilmoreLLC</h2>
+              <p class="text-2xl leading-12">
+                1234 Currituck Dr North <br />
+                Jacksonville, TX 32225 <br />
+                United States
+              </p>
+            </div>
+          </div>
+        </div>
+        <!--Ship to div---------------------------------------------- -->
+        <div class="w-1/2">
+          <div class="space-y-4">
+            <h1 class="font-bold text-5xl">Ship to</h1>
+            <div class="space-y-2">
+              <h2 class="font-bold text-3xl">Another Great Customer</h2>
+              <p class="text-2xl leading-12">
+                4305 La Jolla Village Dr <br />
+                San Diego, CA 92122 <br />
+                United States
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="border-[1px]" />
+      <!-- Detail div---------------------------------------------- -->
+      <div class="flex justify-between items-center w-full p-10">
+        <div class="w-1/2">
+          <ul class="text-2xl space-y-4">
+            <li>Service term</li>
+            <li>Effective date</li>
+            <li>End date</li>
+            <li>Currency</li>
+            <li class="font-bold">Total amount</li>
+          </ul>
+        </div>
+        <div class="w-1/2 flex justify-end text-end">
+          <ul class="text-2xl space-y-4">
+            <li>12 months</li>
+            <li>02/06/2025</li>
+            <li>02/05/2026</li>
+            <li>USD</li>
+            <li class="font-bold">
+              $0.00 <br />
+              <span class="font-light text-gray-500"
+                >will vary based on usage</span
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <hr class="border-[1px]" />
+      <!-- Usage-based Costs div---------------------------------------------- -->
+      <div class="p-10 space-y-4">
+        <h1 class="font-bold text-4xl pb-4">Usage-based Costs</h1>
+        <hr class="w-[90%]" />
+        <div class="flex justify-between items-center w-full">
+          <div class="w-1/2 font-bold text-2xl">Decimal Product</div>
+          <div class="w-1/2 text-xl text-center">
+            <span class="font-bold text-xl"> $100.00 quarterly</span> per An
+            incredibly long unit of <br />
+            measure
+          </div>
+        </div>
+      </div>
+      <!-- Payment Shedule div ---------------------------------->
+      <!-- <div>
+        <p>Payment due immediately delivery of invoice</p>
+        <p>Due Date</p>
+        <div class="flex">
+          <h5>2025</h5>
+          <h5>2026</h5>
+        </div>
+      </div> -->
+    </div>
+  </body>
+</html>
