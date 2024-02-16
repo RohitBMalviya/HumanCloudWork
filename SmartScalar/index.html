@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Main div   ---------------------------------------------- -->
+    <div class="w-full h-screen flex justify-start">
+      <!--Left Slider Main div ------------------------------------------------- -->
+      <div class="sliderwidth w-[350px] h-screen flex-col bg-slate-50">
+        <!-- Contain div ------------------------------------------------- -->
+        <div class="flex flex-col items-center">
+          <!-- Logo and Text ------------------------------------------------- -->
+          <div class="h-24 flex justify-start items-center">
+            <img
+              src="./Images/SmartScalerLogo.svg"
+              alt=""
+              style="width: 100%; height: 50%"
+            />
+            <h3 id="sliderText" class="font-bold text-blue-800 text-4xl pl-3">
+              Smart<span class="text-green-500 text-4xl">Scaler</span>
+            </h3>
+          </div>
+          <!-- Toogle ------------------------------------------------- -->
+          <button
+            class="arrow toggle-button w-12 h-12 flex justify-center items-center border-green-500 shadow-md rounded-l-lg absolute top-24 left-[260px]"
+          >
+            <img
+              src="./Images/arrowrigth.svg"
+              alt="Left"
+              class="arrow"
+              style="
+                width: 50%;
+                height: 60%;
+                transform: translateY(0%) rotate(0deg);
+              "
+            />
+          </button>
+          <!-- Menu List ------------------------------------------------- -->
+          <div class="h-[800px]">
+            <ol class="w-64 flex-col justify-center">
+              <li class="flex justify-start items-center h-16"></li>
+              <li class="flex items-center h-16">
+                <img
+                  src="./Images/datadog.svg"
+                  alt=""
+                  class="imagewidth"
+                  style="width: 100%; height: 50%"
+                />
+
+                <h6
+                  class="sliderListItem font-bold text-zinc-500 text-2xl pl-3 w-[40rem]"
+                >
+                  Datadog
+                </h6>
+              </li>
+              <li class="flex items-center h-16">
+                <img
+                  src="./Images/Icons.svg"
+                  alt="Logo"
+                  style="width: 100%; height: 50%"
+                />
+                <h6
+                  class="sliderListItem font-bold text-zinc-500 text-2xl pl-3 w-[40rem]"
+                >
+                  Prometheus
+                </h6>
+              </li>
+            </ol>
+          </div>
+        </div>
+        <!-- End Logo ------------------------------------------------- -->
+        <div class="flex justify-center">
+          <img
+            src="./Images//LogSS1.png"
+            alt="Logo"
+            class="end-logo"
+            style="width: 20%"
+          />
+        </div>
+      </div>
+      <!-- vertical Bar ------------------------------------------------- -->
+      <div class="w-full flex justify-between items-center pl-2 h-16">
+        <div>
+          <ul class="flex items-center space-x-4">
+            <li>
+              <button
+                class="flex justify-center items-center bg-slate-100 w-32 h-12 rounded-md border-green-500 border-2"
+              >
+                <img
+                  src="./Images/Buildings.svg"
+                  alt="building"
+                  style="width: 30%; height: 70%"
+                />
+                <h6 class="font-bold text-zinc-500 text-xl">Avesha</h6>
+              </button>
+            </li>
+            <h6 class="pb-2 text-zinc-400 text-4xl text-center w-4">/</h6>
+
+            <li>
+              <h6 class="font-bold text-zinc-500 text-xl">Deploy Agent</h6>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script>
+      const listItems = document.querySelectorAll(".sliderListItem");
+      const sliderText = document.getElementById("sliderText");
+      const sliderWidth = document.querySelector(".sliderwidth");
+      const endLogo = document.querySelector(".end-logo");
+      const Arrow = document.querySelector(".arrow");
+      const imageWidth = document.querySelector(".imagewidth");
+
+      function toggleVisibility() {
+        sliderText.classList.toggle("hidden");
+        listItems.forEach(function (item) {
+          item.classList.toggle("hidden");
+        });
+        sliderWidth.classList.toggle("w-[80px]");
+        if (endLogo.style.width === "20%") {
+          endLogo.style.width = "60%";
+        } else {
+          endLogo.style.width = "20%";
+        }
+        if (Arrow.style.transform === "translateY(0%) rotate(0deg)") {
+          Arrow.style.transform = "translateY(0%) rotate(180deg)";
+        } else {
+          Arrow.style.transform = "translateY(0%) rotate(0deg)";
+        }
+        if (imageWidth.style.width === "50%") {
+          imageWidth.style.width = "100%";
+        } else {
+          imageWidth.style.width = "100%";
+        }
+        Arrow.classList.toggle("left-[32px]");
+      }
+
+      const toggleButton = document.querySelector(".toggle-button");
+      toggleButton.addEventListener("click", function () {
+        toggleVisibility();
+      });
+    </script>
+  </body>
+</html>
