@@ -12,47 +12,59 @@ const UseCaseImage = [
     id: 1,
     img: Group1,
     alts: "-",
+    height: "10%",
   },
   {
     id: 2,
     img: Group2,
     alts: "-",
+    height: "10%",
   },
   {
     id: 3,
     img: Group3,
     alts: "-",
+    height: "10%",
   },
   {
     id: 4,
     img: Group4,
     alts: "-",
+    height: "20%",
   },
   {
     id: 5,
     img: Group5,
     alts: "-",
+    height: "15%",
   },
   {
     id: 6,
     img: Group6,
     alts: "-",
+    height: "10%",
   },
 ];
 
-function Home2AboutImage1({ ids, widths, tops, lefts }) {
+function Home2AboutImage1({ ids, tops, lefts, rights }) {
   const imgs = UseCaseImage.filter((items) => items.id === ids);
   const styleImg = {
     position: "absolute",
     zIndex: 6,
-    width: widths,
+    width: "100%",
     top: tops,
     left: lefts,
+    right: rights,
   };
   return (
     <>
       {imgs.map((items, index) => (
-        <Image key={index} src={items.img} alt={items.alts} style={styleImg} />
+        <Image
+          key={index}
+          src={items.img}
+          alt={items.alts}
+          style={{ ...styleImg, height: `${items.height}` }}
+        />
       ))}
     </>
   );

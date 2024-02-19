@@ -12,6 +12,7 @@ const Data = [
     title: "Manufacturing",
     desc: "Utilize real-time data to forecast demand, streamline production schedules, and minimize downtime. Predictive analytics ensures proactive maintenance, enhancing overall operational efficiency and minimizing costs.",
     read: "Read More",
+    pd: "10px",
   },
   {
     id: 2,
@@ -19,6 +20,7 @@ const Data = [
     title: "Banking",
     desc: "Provide actionable insights for risk management, fraud detection, and personalized customer experiences. Real-time analytics ensures prompt responses to market changes, supporting informed decision-making and compliance.",
     read: "Read More",
+    pd: "10px",
   },
   {
     id: 3,
@@ -26,6 +28,7 @@ const Data = [
     title: "Healthcare",
     desc: "Enable data-driven treatment plans, personalized patient care, and efficient resource allocation. Predictive analytics aids in identifying health trends, ensuring proactive healthcare interventions and optimized operational workflows.",
     read: "Read More",
+    pd: "10px",
   },
   {
     id: 4,
@@ -33,6 +36,7 @@ const Data = [
     title: "Logistics Leap",
     desc: "Streamline supply chain operations, optimize route planning, and enhance overall logistics efficiency. DataInsights propels the logistics industry into a new era of precision and effectiveness.",
     read: "Read More",
+    pd: "40px",
   },
   {
     id: 5,
@@ -40,6 +44,7 @@ const Data = [
     title: "Educational Empowerment",
     desc: "Tailor learning experiences, streamline administrative tasks, and empower educators with actionable insights. DataInsights transforms education, ensuring every student's journey is guided by personalized and efficient strategies..",
     read: "Read More",
+    pd: "10px",
   },
   {
     id: 6,
@@ -47,6 +52,7 @@ const Data = [
     title: "Agricultural Advancement",
     desc: "Optimize crop yields, monitor field conditions, and revolutionize farm management with DataInsights. From planting to harvest, embrace data-driven agriculture for a more sustainable and productive future.",
     read: "Read More",
+    pd: "10px",
   },
 ];
 

@@ -41,7 +41,7 @@ function Home3UseCase() {
           color={"rgba(255, 255, 255, 0.40)"}
         />
 
-        <Stack sx={{ width: "95%" }}>
+        <Stack sx={{ width: "96%" }}>
           <Home3UseCaseSection />
         </Stack>
       </Stack>

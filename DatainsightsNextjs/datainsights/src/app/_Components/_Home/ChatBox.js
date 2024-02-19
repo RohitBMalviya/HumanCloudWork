@@ -32,7 +32,7 @@ export default function ChatBox() {
       sx={{
         position: "fixed",
         bottom: "10px",
-        left: "1840px",
+        right: "5px",
         zIndex: 4,
         "& .MuiFab-primary": { backgroundColor: "#6A1152", color: "#6A1152" },
         "& .MuiSpeedDial-actions": {

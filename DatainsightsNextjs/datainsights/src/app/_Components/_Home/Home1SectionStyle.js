@@ -7,7 +7,7 @@ export const styleTypography1 = {
   fontSize: "50px",
   fontWeight: 800,
   lineHeight: "55px",
-  width: "100%",
+  width: "23ch",
 };
 export const styleTypography2 = {
   color: "#797979",
@@ -15,11 +15,11 @@ export const styleTypography2 = {
   fontSize: "22px",
   fontWeight: 400,
   lineHeight: "34.63px",
-  width: "693px",
+  width: "100%",
 };
 export const styleBox1 = {
-  width: "634px",
-  height: "347px",
+  width: "30%",
+  height: "80%",
   position: "relative",
   zIndex: 1,
 };
@@ -27,27 +27,27 @@ export const styleBox2 = {
   background: `url(${Background.src})  no-repeat`,
   backgroundSize: "100% 100%",
   boxShadow: "none",
-  height: "705px",
-  width: "1455px",
+  height: "80%",
+  width: "100%",
   position: "absolute",
-  left: "446px",
+  right: 0,
   zIndex: 1,
 };
 export const styleBox3 = {
   background: `url(${Image1.src})  no-repeat`,
-  backgroundPosition: "center ",
-  backgroundSize: "100% 100%",
+  backgroundPosition: "center",
   boxShadow: "none",
-  height: "617px",
-  width: "1100px",
+  height: "70%",
+  width: "85%",
   position: "absolute",
-  top: "38%",
-  left: "22%",
   zIndex: 2,
+  top: "30%",
+  left: "12%",
 };
 export const styleStack = {
+  width: "90%",
   position: "absolute",
-  top: "442px",
-  left: "62px",
+  bottom: 0,
+  left: "10%",
   zIndex: 2,
 };

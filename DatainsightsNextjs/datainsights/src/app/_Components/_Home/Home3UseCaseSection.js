@@ -38,8 +38,8 @@ function Home3UseCaseData() {
                   alt="images"
                   style={{
                     borderRadius: "15px",
-                    width: "450px",
-                    height: "270px",
+                    width: "100%",
+                    height: "22vh",
                   }}
                 />
               </Box>
@@ -50,10 +50,15 @@ function Home3UseCaseData() {
                   justifyContent: "center",
                   alignItems: "flex-start",
                   width: "85%",
+                  height: "100%",
                 }}
               >
                 <Typography sx={styleTypography1}>{items.title}</Typography>
-                <Typography sx={styleTypography2}>{items.desc}</Typography>
+                <Typography
+                  sx={{ ...styleTypography2, paddingBottom: `${items.pd}` }}
+                >
+                  {items.desc}
+                </Typography>
 
                 <Button
                   onClick={() => router.push("/usecases")}

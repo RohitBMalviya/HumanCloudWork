@@ -7,7 +7,6 @@ import {
   styleTypography1,
   styleTypography2,
   styleTypography3,
-  styleBox1,
   styleBox2,
   styleStack1,
   styleStack2,
@@ -19,15 +18,10 @@ import Home2AboutImage2 from "./Home2AboutImage2";
 function Home2About() {
   const router = useRouter();
   const [scrolling, setScrolling] = useState(false);
-  const [boxHeightExceeded, setBoxHeightExceeded] = useState(false);
   const [initialLoad, setInitialLoad] = useState(true);
 
   const handleScroll = () => {
-    const scrollTop = window.scrollY;
-    const boxHeight = document.getElementById("aboutBox")?.clientHeight || 0;
-
-    setScrolling(scrollTop > 0);
-    setBoxHeightExceeded(boxHeight > 800);
+    setScrolling(window.scrollY > 0);
   };
 
   useEffect(() => {
@@ -54,23 +48,25 @@ function Home2About() {
     <>
       <Stack direction={"column"} spacing={14} sx={styleStack1}>
         {/* Design border ============================================================ */}
-        <Borders
-          widths={"854.11px"}
-          heights={"751.91px"}
-          zIndexs={0}
-          bottoms={"8%"}
-          lefts={"-16%"}
-          color={"#EDD"}
-        />
-        <Borders
-          widths={"1222.896px"}
-          heights={"950.752px"}
-          tops={"-16%"}
-          lefts={"-26%"}
-          zIndexs={0}
-          color={"#EDD"}
-        />
-        <Box sx={styleBox1}>
+        <Box>
+          <Borders
+            widths={"854.11px"}
+            heights={"851.91px"}
+            zIndexs={0}
+            bottoms={100}
+            lefts={-500}
+            color={"#EDD"}
+          />
+          <Borders
+            widths={"1222.896px"}
+            heights={"1050.752px"}
+            bottoms={0}
+            lefts={-600}
+            zIndexs={0}
+            color={"#EDD"}
+          />
+        </Box>
+        <Box sx={{ display: "flex", justifyContent: "center" }}>
           <Buttons
             ids={8}
             backgrounds={"#EFECFF"}
@@ -82,25 +78,40 @@ function Home2About() {
 
         <Box sx={styleBox2}>
           {/* Content1 =========================================================== */}
-          <Box sx={{ width: "45%", position: "relative", zIndex: 1 }}>
-            <Home2AboutImage2 scrollings={scrolling} />
+          <Box
+            sx={{
+              width: { sx: "100%", md: "50%" },
+              position: "relative",
+              zIndex: 1,
+            }}
+          >
+            <Box
+              sx={{
+                width: "100%",
+                height: "100%",
+                position: "relative",
+              }}
+            >
+              <Home2AboutImage2 scrollings={scrolling} />
+            </Box>
           </Box>
 
           {/* Content2 =========================================================== */}
+          <Box sx={{ width: { sx: "100%", md: "50%" } }}>
+            <Stack direction={"column"} spacing={3} sx={styleStack2}>
+              <Typography sx={styleTypography1}>
+                Discover Our DataInsights Journey, Delivering Insights at Every
+                Turn.
+              </Typography>
+              <Typography sx={styleTypography2}>
+                At DataInsights, we simplify data exploration. We're your
+                partners in unlocking insights effortlessly. With user-friendly
+                tools, we help businesses make informed decisions. Our mission
+                is to elevate your data experience, making it accurate, simple,
+                and powerful for every user. Welcome to a world of seamless data
+                exploration!
+              </Typography>
 
-          <Stack direction={"column"} spacing={3} sx={styleStack2}>
-            <Typography sx={styleTypography1}>
-              Discover Our DataInsights Journey, Delivering Insights at Every
-              Turn.
-            </Typography>
-            <Typography sx={styleTypography2}>
-              At DataInsights, we simplify data exploration. We're your partners
-              in unlocking insights effortlessly. With user-friendly tools, we
-              help businesses make informed decisions. Our mission is to elevate
-              your data experience, making it accurate, simple, and powerful for
-              every user. Welcome to a world of seamless data exploration!
-            </Typography>
-            <Box sx={{ width: "82%" }}>
               <Divider
                 orientation="horizontal"
                 sx={{
@@ -109,13 +120,15 @@ function Home2About() {
                   borderBottomWidth: "medium",
                 }}
               />
-            </Box>
-            <Box width={"82%"}>
-              <Button onClick={() => router.push("/about")}>
+
+              <Button
+                sx={{ padding: "0px" }}
+                onClick={() => router.push("/about")}
+              >
                 <Typography sx={styleTypography3}>Learn More</Typography>
               </Button>
-            </Box>
-          </Stack>
+            </Stack>
+          </Box>
         </Box>
       </Stack>
     </>

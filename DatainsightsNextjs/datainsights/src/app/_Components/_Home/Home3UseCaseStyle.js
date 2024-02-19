@@ -5,11 +5,11 @@ export const styleBox2 = {
 };
 export const styleStack = {
   backgroundColor: "#BE3788",
-  widths: "100%",
-  height: "950px",
+  height: "100%",
   overflow: "hidden",
   position: "relative",
   zIndex: 0,
+  padding: "50px",
 };
 
 export const settings = {
@@ -25,6 +25,7 @@ export const styleTypography1 = {
   fontSize: "30px",
   fontWeight: 400,
   width: "100%",
+  height: "100%",
 };
 export const styleTypography2 = {
   color: "#797979",
@@ -32,8 +33,8 @@ export const styleTypography2 = {
   fontSize: "22px",
   fontWeight: 400,
   lineHeight: "34px",
-  width: "90%",
-  height: "250px",
+  width: "100%",
+  height: "100%",
 };
 
 export const styleTypography3 = {
@@ -41,12 +42,11 @@ export const styleTypography3 = {
   fontFamily: "Nunito",
   fontSize: "18px",
   fontWeight: 700,
-
   textDecorationLine: "underline",
 };
 export const styleBox1 = {
   backgroundColor: "#F9F9F9",
   borderRadius: "40px",
-  height: "670px",
-  paddingTop: "40px",
+  height: "100%",
+  padding: "40px 0px",
 };

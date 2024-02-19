@@ -24,17 +24,7 @@ function Home1Section1() {
           <Stack sx={styleStack} spacing={4} direction={"column"}>
             <Stack spacing={1}>
               <Typography sx={styleTypography1}>
-                <span
-                  style={{
-                    color: " #C84D9A",
-                    fontFamily: "Nunito",
-                    fontSize: "50px",
-                    fontWeight: 800,
-                    lineHeight: "110%",
-                  }}
-                >
-                  DataInsights
-                </span>
+                <span style={{ color: " #C84D9A" }}>DataInsights</span>
                 <br />
                 Revolutionize Exploration with Flawless Visualization
               </Typography>
@@ -59,10 +49,17 @@ function Home1Section1() {
             </Stack>
           </Stack>
         </Box>
-        <Box sx={styleBox2}>
-          <Box sx={styleBox3}></Box>
+        <Box
+          sx={{
+            position: "relative",
+            zIndex: 0,
+            width: "70%",
+            height: "100%",
+          }}
+        >
+          <Box sx={styleBox2}></Box>
+          <Box sx={styleBox3}> </Box>
         </Box>
-        {/* <ChatBox /> */}
       </Box>
     </>
   );

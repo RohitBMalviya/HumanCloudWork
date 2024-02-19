@@ -1,9 +1,5 @@
-export const styleBox1 = {
-  display: "flex",
-  justifyContent: "center",
-};
 export const styleBox2 = {
-  display: "flex",
+  display: { xs: "grid", md: "flex" },
   justifyContent: "center",
   position: "relative",
   zIndex: 0,
@@ -14,7 +10,7 @@ export const styleTypography1 = {
   fontFamily: "Nunito",
   fontSize: "40px",
   fontWeight: 700,
-  width: "82%",
+  width: "30ch",
   lineHeight: "54px",
 };
 export const styleTypography2 = {
@@ -22,7 +18,7 @@ export const styleTypography2 = {
   fontFamily: "Nunito",
   fontSize: "22px",
   fontWeight: 500,
-  width: "695px",
+  width: "55ch",
   lineHeight: "30px",
 };
 export const styleTypography3 = {
@@ -35,14 +31,14 @@ export const styleTypography3 = {
 export const styleStack1 = {
   width: "100%",
   height: "900px",
-  overflow: "hidden",
+  // overflow: "hidden",
   position: "relative",
   zIndex: 0,
 };
 export const styleStack2 = {
   position: "relative",
   zIndex: 1,
-  width: "45%",
+  width: "100%",
   justifyContent: "center",
-  alignItems: "center",
+  alignItems: "start",
 };
